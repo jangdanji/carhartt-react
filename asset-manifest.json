@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.1cad9edc.css",
-    "main.js": "/static/js/main.b7167f86.js",
-    "static/js/787.223550ad.chunk.js": "/static/js/787.223550ad.chunk.js",
-    "index.html": "/index.html",
-    "main.1cad9edc.css.map": "/static/css/main.1cad9edc.css.map",
-    "main.b7167f86.js.map": "/static/js/main.b7167f86.js.map",
-    "787.223550ad.chunk.js.map": "/static/js/787.223550ad.chunk.js.map"
+    "main.css": "/carhartt-react/static/css/main.1cad9edc.css",
+    "main.js": "/carhartt-react/static/js/main.e14d1f0e.js",
+    "static/js/787.223550ad.chunk.js": "/carhartt-react/static/js/787.223550ad.chunk.js",
+    "index.html": "/carhartt-react/index.html",
+    "main.1cad9edc.css.map": "/carhartt-react/static/css/main.1cad9edc.css.map",
+    "main.e14d1f0e.js.map": "/carhartt-react/static/js/main.e14d1f0e.js.map",
+    "787.223550ad.chunk.js.map": "/carhartt-react/static/js/787.223550ad.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1cad9edc.css",
-    "static/js/main.b7167f86.js"
+    "static/js/main.e14d1f0e.js"
   ]
 }
