@@ -72,6 +72,7 @@ export default function Home() {
                                 <div className='slide-wrap'>
                                     <img src={data.image[0]}></img>
                                     <img src={data.image[2]} className='hover-img'></img>
+                                    <p className='name'>{data.kor}</p>
                                 </div>
                             </Link>
                         </SwiperSlide>
@@ -94,6 +95,7 @@ export default function Home() {
                                 <div className='slide-wrap'>
                                     <img src={data.image[0]}></img>
                                     <img src={data.image[1]} className='hover-img'></img>
+                                    <p className='name'>{data.kor}</p>
                                 </div>
                             </Link>
                         </SwiperSlide>
@@ -108,13 +110,15 @@ export default function Home() {
             <h2>Lookbook</h2>
             <div className='lookbook-wrap'>
                 <div className='accordion a1'>
-                    <img src={lookbook_data[0].src} alt='lookbook-1'></img>
+                    {console.log(process.env.PUBLIC_URL + lookbook_data[0].src)}
+
+                    <img src={process.env.PUBLIC_URL + lookbook_data[0].src} alt='lookbook-1'></img>
                 </div>
                 <div className='accordion a2'>
-                    <img src={lookbook_data[1].src} alt='lookbook-2'></img>
+                    <img src={process.env.PUBLIC_URL + lookbook_data[1].src} alt='lookbook-2'></img>
                 </div>
                 <div className='accordion a3'>
-                    <img src={lookbook_data[2].src} alt='lookbook-3'></img>
+                    <img src={process.env.PUBLIC_URL + lookbook_data[2].src} alt='lookbook-3'></img>
                 </div>
             </div>
         </section>
@@ -127,7 +131,7 @@ export default function Home() {
                             
                                 <div className='pick-product' key={i}>
                                         <Link to={`detail/${data.id}`}>
-                                            <img src={data.src} alt='mds-pick-img'></img>
+                                            <img src={process.env.PUBLIC_URL + data.src} alt='mds-pick-img'></img>
                                         </Link>
                                         <div className='hover-content'>
                                             <p className='title-eng'>{data.eng}</p>
@@ -135,9 +139,7 @@ export default function Home() {
                                             <p className='price'>{data.price}</p>
                                             <button className='view-more' onClick={ () => navigate(`detail/${data.id}`)}>자세히 보기</button>
                                         </div>
-                                    
                                 </div>
-                            
                         )
                     })
                 }
@@ -150,7 +152,7 @@ export default function Home() {
                     insta_data.map((data) => {
                         return(
                             <div className='insta-post'>
-                                <img src={data.src} alt='instagram-link-img'></img>
+                                <img src={process.env.PUBLIC_URL + data.src} alt='instagram-link-img'></img>
                                 <div className='link'>인스타그램 방문하기</div>
                             </div>
                         )

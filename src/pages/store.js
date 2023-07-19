@@ -76,27 +76,11 @@ const cart = createSlice({
     }
 })
 
-// const dataImport = createSlice({
-//     name: 'data',
-//     initialState: products,
-//     reducers: {
-//         sortProducts(state, action){
-//             if (action.payload === '최신순 정렬'){
-//                 const newset = products.slice().sort((pd1, pd2) => pd2.sales - pd1.sales)
-//                 // const newest = state
-//                 return newest
-//             }
-//         }
-//     }
-// })
 
 export const { addItem, cartBtn } = cart.actions
-// export const { sortProducts } = dataImport.actions
-
 
 export default configureStore({
     reducer:{
         cart:cart.reducer,
-        // dataImport:dataImport.reducer
     }
 })

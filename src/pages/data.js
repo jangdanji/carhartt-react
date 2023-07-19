@@ -85,28 +85,28 @@ export const new_data = [
 
 export const mds_data = [
     {
-        src: './img/md_01.jpg',
+        src: '/img/md_01.jpg',
         eng: 'S/S PALM SCRIPT T-SHIRT',
         id: 'CA23SSTSSS00002018',
         kor: '반팔 팜 스크립트 티셔츠 블랙',
         price: 75000
     },
     {
-        src: './img/md_02.jpg',
+        src: '/img/md_02.jpg',
         eng: 'S/S VACANZE T-SHIRT',
         id: 'CA23SSTSSS09748002',
         kor: '반팔 바칸제 티셔츠 시트론',
         price: 78000
     },
     {
-        src: './img/md_03.jpg',
+        src: '/img/md_03.jpg',
         eng: 'S/S INNOVATION POCKET T-SHIRT',
         id: 'CA23SSTSSS00040033',
         kor: '반팔 이노베이션 포켓 티셔츠 테이데',
         price: 85000
     },
     {
-        src: './img/md_04.jpg',
+        src: '/img/md_04.jpg',
         eng: 'S/S COAST STATE T-SHIRT',
         id: 'CA23SSTSSS00040026',
         kor: '반팔 코스트 스테이트 티셔츠 화이트',
@@ -116,16 +116,16 @@ export const mds_data = [
 
 export const lookbook_data = [
     {
-        src: './img/lookbook_01.jpg',
+        src: '/img/lookbook_01.jpg',
         detail: [
-          { src: './img/lookbook_01_1.png',
+          { src: '/img/lookbook_01_1.png',
             eng: 'S/S MARINA SHIRT MARINA PRINT, ATOM BLUE',
             kor: '반팔 마리나 셔츠 마리나 프린트, 아톰 블루',
             price: 145000,
             desc: 'S/S MARINA SHIRT는 면 54%, 텐셀 46% 새틴 소재의 반팔 셔츠입니다. 루즈 핏이며, 올오버 프린트 형식입니다. 가먼트 워시드 처리 되어 있으며, 가슴 포켓이 있습니다.'
           },
           {
-            src: './img/lookbook_01_2.png',
+            src: '/img/lookbook_01_2.png',
             eng: 'DOUBLE KNEE PANT DEARBORN WAX STONE WASHED',
             kor: '더블 니 팬츠 디어본 왁스 스톤 워시드',
             price: 168000,
@@ -134,30 +134,30 @@ export const lookbook_data = [
         ]
     },
     {
-        src: './img/lookbook_02.jpg',
+        src: '/img/lookbook_02.jpg',
         detail: [
-          { src: './img/lookbook_02_1.png',
+          { src: '/img/lookbook_02_1.png',
             eng: 'MADISON LOGO CAP WALL',
             kor: '메디슨 로고 캡 월',
             price: 68000,
             desc: 'MADISON LOGO CAP은 면100% 트윌 소재의 모자입니다. 모자 둘레는 메탈 버클 스트랩을 사용하여 57 ~ 62 CM 까지 유동적으로 조절이 가능합니다. 안감이 없으며, 6개의 패널로 구분되어 있습니다. 정면에 C로고 자수가 있습니다.'
           },
           {
-            src: './img/lookbook_02_2.png',
+            src: '/img/lookbook_02_2.png',
             eng: 'BAYFIELD TOTE STORM BLUE FADED',
             kor: '베이필드 토트 스톰 블루 페이디드',
             price: 108000,
             desc: 'BAYFIELD TOTE SMALL은 오가닉 코튼 100% "DEARBORN" 캔버스 소재의 토트백입니다. 36 X 34 X 12 CM 크기로 14.6 리터의 수납이 가능합니다. 안감이 없고, 스냅으로 여닫을 수 있습니다. 내부에 지퍼가 달린 포켓이 있으며, 정면에는 스퀘어 라벨이 부착된 포켓이 있습니다.'
           },
           {
-            src: './img/lookbook_02_3.png',
+            src: '/img/lookbook_02_3.png',
             eng: 'S/S BRAXTON SHIRT WHITE/WHITE',
             kor: '반팔 브랙스턴 셔츠 화이트/화이트',
             price: 118000,
             desc: 'S/S BRAXTON SHIRT는 면100% 옥스포드 소재의 반팔 셔츠입니다. 루즈 핏이며, 얀 다이드 소재를 사용하였습니다. 가먼트 워시드 처리 되어 있으며, 버튼 다운 칼라 형태입니다. 가슴 포켓에는 로고 자수가 있습니다.'
           },
           {
-            src: './img/lookbook_02_3.png',
+            src: '/img/lookbook_02_3.png',
             eng: 'LANDON SHORT ROBERTSON BLUE BLEACHED',
             kor: '랜든 쇼츠 로버트슨 블루 블리치드',
             price: 135000,
@@ -166,23 +166,23 @@ export const lookbook_data = [
         ]
     },
     {
-        src: './img/lookbook_03.jpg',
+        src: '/img/lookbook_03.jpg',
         detail: [
-          { src: './img/lookbook_03_1.png',
+          { src: '/img/lookbook_03_1.png',
             eng: 'BACKLEY CAP LUPINUS',
             kor: '바클리 캡 루피너스',
             price: 58000,
             desc: 'BACKLEY CAP은 면 100% 캔버스 소재의 모자입니다. 모자 둘레는 스트랩을 사용하여 51 ~ 61 CM 까지 유동적으로 조절이 가능합니다. 5개의 패널 형식입니다. 메탈 소재의 작은 통풍 구멍이 있으며, 제품의 정면에 스퀘어 라벨이 부착되어 있습니다.'
           },
           {
-            src: './img/lookbook_03_2.png',
+            src: '/img/lookbook_03_2.png',
             eng: 'W S/S TAMAS TROPICS SHIRT TAMAS TROPICS PRINT, PARADISE BIRD',
             kor: '여성 반팔 타마스 트로픽스 셔츠 타마스 트로픽스 프린트, 파라다이스 버드',
             price: 168000,
             desc: 'W S/S TAMAS TROPICS SHIRT는 서스테이너블 비스코스 포플린 100% 소재의 반팔 셔츠입니다. 올오버 프린트 형태이며, 가먼트 워시드 처리 되어 있습니다. 가슴 포켓이 있습니다..'
           },
           {
-            src: './img/lookbook_03_3.png',
+            src: '/img/lookbook_03_3.png',
             eng: 'W TRISTIN SHORT WAX RINSED',
             kor: '여성 트리스틴 반바지 왁스 린스드',
             price: 138000,
@@ -194,16 +194,16 @@ export const lookbook_data = [
 
 export const insta_data = [
     {
-      src: './img/insta_01.jpg'
+      src: '/img/insta_01.jpg'
     },
     {
-      src: './img/insta_02.jpg'
+      src: '/img/insta_02.jpg'
     },
     {
-      src: './img/insta_03.jpg'
+      src: '/img/insta_03.jpg'
     },
     {
-      src: './img/insta_04.jpg'
+      src: '/img/insta_04.jpg'
     },
 ]
 
