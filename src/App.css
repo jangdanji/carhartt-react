@@ -22,11 +22,14 @@ li {
 .header .header-wrap .logo {
   cursor: pointer;
 }
+.header .header-wrap .category ul {
+  margin-left: 15px;
+}
 .header .header-wrap .category ul li {
   display: inline-block;
   margin: 0 10px;
   padding: 0 5px;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -116,8 +119,9 @@ li {
 }
 .best-products .best-products-wrap .swiper .swiper-slide {
   position: relative;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
+}
+.best-products .best-products-wrap .swiper .swiper-slide .slide-wrap {
+  margin-bottom: 40px;
 }
 .best-products .best-products-wrap .swiper .swiper-slide img {
   width: 100%;
@@ -125,7 +129,7 @@ li {
 }
 .best-products .best-products-wrap .swiper .swiper-slide img.hover-img {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 40px);
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
@@ -141,7 +145,7 @@ li {
 .best-products .best-products-wrap .swiper .swiper-slide p.name {
   position: absolute;
   z-index: 2;
-  bottom: 0;
+  bottom: 40px;
   background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   margin: auto 0;
@@ -151,7 +155,21 @@ li {
   color: white;
 }
 .best-products .best-products-wrap .swiper .swiper-button-prev, .best-products .best-products-wrap .swiper .swiper-button-next {
+  position: absolute;
+  top: 0;
+  padding: 0 15px;
   color: #FFBF00;
+  height: calc(100% - 40px);
+  margin-top: 0;
+}
+.best-products .best-products-wrap .swiper .swiper-button-prev:hover, .best-products .best-products-wrap .swiper .swiper-button-next:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.best-products .best-products-wrap .swiper .swiper-button-prev {
+  left: 0;
+}
+.best-products .best-products-wrap .swiper .swiper-button-next {
+  right: 0;
 }
 .best-products .best-products-wrap .swiper .swiper-pagination-bullet-active {
   background-color: #FFBF00;
@@ -169,17 +187,17 @@ li {
 }
 .new-products .new-products-wrap .swiper .swiper-slide {
   position: relative;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
+}
+.new-products .new-products-wrap .swiper .swiper-slide .slide-wrap {
+  margin-bottom: 40px;
 }
 .new-products .new-products-wrap .swiper .swiper-slide img {
   width: 100%;
-  height: 90%;
   cursor: pointer;
 }
 .new-products .new-products-wrap .swiper .swiper-slide img.hover-img {
   width: 100%;
-  height: 90%;
+  height: calc(100% - 40px);
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
@@ -195,7 +213,7 @@ li {
 .new-products .new-products-wrap .swiper .swiper-slide p.name {
   position: absolute;
   z-index: 2;
-  bottom: 0;
+  bottom: 40px;
   background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   margin: auto 0;
@@ -205,7 +223,21 @@ li {
   color: white;
 }
 .new-products .new-products-wrap .swiper .swiper-button-prev, .new-products .new-products-wrap .swiper .swiper-button-next {
+  position: absolute;
+  top: 0;
+  padding: 0 15px;
   color: #FFBF00;
+  height: calc(100% - 40px);
+  margin-top: 0;
+}
+.new-products .new-products-wrap .swiper .swiper-button-prev:hover, .new-products .new-products-wrap .swiper .swiper-button-next:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.new-products .new-products-wrap .swiper .swiper-button-prev {
+  left: 0;
+}
+.new-products .new-products-wrap .swiper .swiper-button-next {
+  right: 0;
 }
 .new-products .new-products-wrap .swiper .swiper-pagination-bullet-active {
   background-color: #FFBF00;
@@ -224,43 +256,47 @@ li {
   transition: width 0.5s;
 }
 .lookbook .lookbook-wrap .accordion {
+  width: 405px;
   height: 700px;
   margin-right: 15px;
   overflow: hidden;
-  transition: flex 0.2s;
+  position: relative;
+  cursor: pointer;
 }
 .lookbook .lookbook-wrap .accordion:last-child {
   margin-right: 0;
 }
-.lookbook .lookbook-wrap .accordion .hover-btn {
-  border: none;
-  color: #000;
-}
-.lookbook .lookbook-wrap .accordion .hover-btn:after {
-  position: absolute;
-  content: "";
-  width: 0;
+.lookbook .lookbook-wrap .accordion img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
+}
+.lookbook .lookbook-wrap .accordion .hover-content {
+  position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
-  direction: rtl;
-  z-index: -1;
-  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.6), -4px -4px 5px 0px rgba(255, 255, 255, 0.6), 7px 7px 20px 0px rgba(0, 0, 0, 0.1333333333), 4px 4px 5px 0px rgba(0, 0, 0, 0.0666666667);
-  transition: all 0.3s ease;
+  opacity: 0;
+  transition: 0.1s;
 }
-.lookbook .lookbook-wrap .accordion .hover-btn:hover {
-  color: #000;
+.lookbook .lookbook-wrap .accordion .hover-content:hover {
+  opacity: 1;
 }
-.lookbook .lookbook-wrap .accordion .hover-btn:hover:after {
-  left: auto;
-  right: 0;
+.lookbook .lookbook-wrap .accordion .hover-content .hover-text {
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.lookbook .lookbook-wrap .accordion .hover-btn:active {
-  top: 2px;
+.lookbook .lookbook-wrap .accordion .hover-content .hover-text p {
+  margin: 0;
+  line-height: 30px;
 }
-.lookbook .lookbook-wrap img {
-  height: 100%;
+.lookbook .lookbook-wrap .accordion .hover-content .hover-text span {
+  color: #FFBF00;
 }
 
 .mds-pick h2 {
@@ -432,21 +468,51 @@ li {
   margin-left: 0;
 }
 
-section.products .pruducts-wrap {
+section.products .products-wrap {
   margin: 0 auto;
   width: 1245px;
   display: flex;
   flex-wrap: wrap;
 }
-section.products .pruducts-wrap .product-box {
+section.products .products-wrap .sub-banner {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+section.products .products-wrap .sub-banner img {
+  width: 100%;
+  filter: brightness(50%);
+}
+section.products .products-wrap .sub-banner h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  padding: 0 30px;
+  font-size: 36px;
+}
+section.products .products-wrap .filter {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.products .products-wrap .filter select {
+  width: 150px;
+  padding: 10px;
+}
+section.products .products-wrap .product-box {
   width: 300px;
-  margin: 20px 15px 0 0;
+  margin: 20px 15px 50px 0;
   position: relative;
 }
-section.products .pruducts-wrap .product-box:nth-child(4n) {
+section.products .products-wrap .product-box:nth-child(4n+2) { /* sub banner, filter때문에.. */
   margin-right: 0;
 }
-section.products .pruducts-wrap .product-box img {
+section.products .products-wrap .product-box img {
   display: block;
   width: 100%;
   height: 400px; /* 임시 (원본 사이즈 모름) */
@@ -454,29 +520,30 @@ section.products .pruducts-wrap .product-box img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-section.products .pruducts-wrap .product-box img.hover-img {
+section.products .products-wrap .product-box img.hover-img {
   opacity: 0;
   position: absolute;
   top: 0;
   z-index: 1;
   transition: 0.1s;
 }
-section.products .pruducts-wrap .product-box img.hover-img:hover {
+section.products .products-wrap .product-box img.hover-img:hover {
   opacity: 1;
 }
-section.products .pruducts-wrap .product-box .detail h3.name-kor {
+section.products .products-wrap .product-box .detail h3.name-kor {
   height: 50px;
   background-color: #eee;
   padding: 10px;
 }
-section.products .pruducts-wrap .product-box .detail p, section.products .pruducts-wrap .product-box .detail b {
+section.products .products-wrap .product-box .detail p, section.products .products-wrap .product-box .detail b {
   padding: 0 10px;
 }
-section.products .pruducts-wrap .product-box .detail button.add-to-cart {
+section.products .products-wrap .product-box .detail button.add-to-cart {
   display: block;
   width: 100px;
   float: right;
   margin-right: 10px;
+  background-color: #FFBF00;
 }
 
 section.detail-view .detail-view-wrap {
@@ -579,4 +646,92 @@ section.detail-view .detail-view-wrap .detail-info .notice .notice-title {
 }
 .my-cart .my-cart-wrap h2.cart-result {
   text-align: center;
+}
+
+.lookbook-page .lookbook-page-wrap {
+  margin: 0 auto;
+  width: 1245px;
+}
+.lookbook-page .lookbook-page-wrap .lookbook-title {
+  position: relative;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  color: white;
+}
+.lookbook-page .lookbook-page-wrap .lookbook-title h1 {
+  font-size: 36px;
+  margin: 0;
+}
+.lookbook-page .lookbook-page-wrap .lookbook-title h1, .lookbook-page .lookbook-page-wrap .lookbook-title p {
+  padding: 30px;
+}
+.lookbook-page .lookbook-page-wrap .lookbook-title video {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+}
+.lookbook-page .lookbook-page-wrap .contents h2.title {
+  text-align: center;
+  margin: 30px 0;
+}
+.lookbook-page .lookbook-page-wrap .contents .content {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.lookbook-page .lookbook-page-wrap .contents .content > img {
+  width: 90%;
+  margin: 15px 0;
+}
+.lookbook-page .lookbook-page-wrap .contents .content .wearing {
+  width: 100%;
+  margin: 60px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.lookbook-page .lookbook-page-wrap .contents .content .wearing > div {
+  cursor: pointer;
+}
+.lookbook-page .lookbook-page-wrap .contents .content .wearing h2 {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0;
+}
+.lookbook-page .lookbook-page-wrap .contents .content .wearing img {
+  width: 195px;
+  border: 1px solid #eee;
+}
+.lookbook-page .lookbook-page-wrap .contents .content .wearing img:last-child {
+  margin-right: 0;
+}
+.lookbook-page .lookbook-page-wrap .contents .content .wearing .wearing-product {
+  position: relative;
+  margin-right: 15px;
+}
+.lookbook-page .lookbook-page-wrap .contents .content .wearing .wearing-product .hover-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  transition: 0.1s;
+  display: flex;
+  align-items: center;
+}
+.lookbook-page .lookbook-page-wrap .contents .content .wearing .wearing-product .hover-content:hover {
+  opacity: 1;
+}
+.lookbook-page .lookbook-page-wrap .contents .content .wearing .wearing-product .hover-content p {
+  text-align: center;
+  width: 100%;
 }/*# sourceMappingURL=App.css.map */

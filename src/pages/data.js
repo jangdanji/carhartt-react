@@ -116,80 +116,45 @@ export const mds_data = [
 
 export const lookbook_data = [
     {
-        src: '/img/lookbook_01.jpg',
-        detail: [
-          { src: '/img/lookbook_01_1.png',
-            eng: 'S/S MARINA SHIRT MARINA PRINT, ATOM BLUE',
-            kor: '반팔 마리나 셔츠 마리나 프린트, 아톰 블루',
-            price: 145000,
-            desc: 'S/S MARINA SHIRT는 면 54%, 텐셀 46% 새틴 소재의 반팔 셔츠입니다. 루즈 핏이며, 올오버 프린트 형식입니다. 가먼트 워시드 처리 되어 있으며, 가슴 포켓이 있습니다.'
-          },
-          {
-            src: '/img/lookbook_01_2.png',
-            eng: 'DOUBLE KNEE PANT DEARBORN WAX STONE WASHED',
-            kor: '더블 니 팬츠 디어본 왁스 스톤 워시드',
-            price: 168000,
-            desc: 'DOUBLE KNEE PANT는 오가닉 코튼 100% "DEARBORN" 캔버스 소재의 워크 팬츠입니다. 릴렉스드 스트레이트 핏에 밑위는 레귤러 웨이스트입니다. 전체적으로 트리플 스티칭 되있으며, 지퍼 플라이 형식입니다. 무릎 부분은 이중으로 덧대어져 있습니다. 제품 측면에는 툴 포켓, 해머 루프가 있으며, 후면 포켓에 스퀘어 라벨이 부착되어 있습니다.'
-          }
-        ]
+      src: ['/img/lookbook_01.jpg', '/img/lookbook_01_hover.jpg'],
     },
     {
-        src: '/img/lookbook_02.jpg',
-        detail: [
-          { src: '/img/lookbook_02_1.png',
-            eng: 'MADISON LOGO CAP WALL',
-            kor: '메디슨 로고 캡 월',
-            price: 68000,
-            desc: 'MADISON LOGO CAP은 면100% 트윌 소재의 모자입니다. 모자 둘레는 메탈 버클 스트랩을 사용하여 57 ~ 62 CM 까지 유동적으로 조절이 가능합니다. 안감이 없으며, 6개의 패널로 구분되어 있습니다. 정면에 C로고 자수가 있습니다.'
-          },
-          {
-            src: '/img/lookbook_02_2.png',
-            eng: 'BAYFIELD TOTE STORM BLUE FADED',
-            kor: '베이필드 토트 스톰 블루 페이디드',
-            price: 108000,
-            desc: 'BAYFIELD TOTE SMALL은 오가닉 코튼 100% "DEARBORN" 캔버스 소재의 토트백입니다. 36 X 34 X 12 CM 크기로 14.6 리터의 수납이 가능합니다. 안감이 없고, 스냅으로 여닫을 수 있습니다. 내부에 지퍼가 달린 포켓이 있으며, 정면에는 스퀘어 라벨이 부착된 포켓이 있습니다.'
-          },
-          {
-            src: '/img/lookbook_02_3.png',
-            eng: 'S/S BRAXTON SHIRT WHITE/WHITE',
-            kor: '반팔 브랙스턴 셔츠 화이트/화이트',
-            price: 118000,
-            desc: 'S/S BRAXTON SHIRT는 면100% 옥스포드 소재의 반팔 셔츠입니다. 루즈 핏이며, 얀 다이드 소재를 사용하였습니다. 가먼트 워시드 처리 되어 있으며, 버튼 다운 칼라 형태입니다. 가슴 포켓에는 로고 자수가 있습니다.'
-          },
-          {
-            src: '/img/lookbook_02_3.png',
-            eng: 'LANDON SHORT ROBERTSON BLUE BLEACHED',
-            kor: '랜든 쇼츠 로버트슨 블루 블리치드',
-            price: 135000,
-            desc: 'LANDON SHORT는 면100% "ROBERTSON" 데님 소재의 반바지입니다. 루즈 핏에 밑위는 레귤러 웨이스트입니다. 지퍼 플라이 형식입니다. 후면에 스퀘어 라벨이 부착되어 있습니다.'
-          },
-        ]
+      src: ['/img/lookbook_02.jpg', '/img/lookbook_02_hover.jpg'],
     },
     {
-        src: '/img/lookbook_03.jpg',
-        detail: [
-          { src: '/img/lookbook_03_1.png',
-            eng: 'BACKLEY CAP LUPINUS',
-            kor: '바클리 캡 루피너스',
-            price: 58000,
-            desc: 'BACKLEY CAP은 면 100% 캔버스 소재의 모자입니다. 모자 둘레는 스트랩을 사용하여 51 ~ 61 CM 까지 유동적으로 조절이 가능합니다. 5개의 패널 형식입니다. 메탈 소재의 작은 통풍 구멍이 있으며, 제품의 정면에 스퀘어 라벨이 부착되어 있습니다.'
-          },
-          {
-            src: '/img/lookbook_03_2.png',
-            eng: 'W S/S TAMAS TROPICS SHIRT TAMAS TROPICS PRINT, PARADISE BIRD',
-            kor: '여성 반팔 타마스 트로픽스 셔츠 타마스 트로픽스 프린트, 파라다이스 버드',
-            price: 168000,
-            desc: 'W S/S TAMAS TROPICS SHIRT는 서스테이너블 비스코스 포플린 100% 소재의 반팔 셔츠입니다. 올오버 프린트 형태이며, 가먼트 워시드 처리 되어 있습니다. 가슴 포켓이 있습니다..'
-          },
-          {
-            src: '/img/lookbook_03_3.png',
-            eng: 'W TRISTIN SHORT WAX RINSED',
-            kor: '여성 트리스틴 반바지 왁스 린스드',
-            price: 138000,
-            desc: 'W TRISTIN SHORT는 면 65%, 폴리에스테르 35% "JEFFERSON" 트윌 소재의 치노 반바지입니다. 릴렉스드 핏에 하이 웨이스트입니다. 지퍼 플라이 형식입니다. 후면에 스퀘어 라벨이 부착되어 있습니다.'
-          },
-        ]
+      src: ['/img/lookbook_03.jpg', '/img/lookbook_03_hover.jpg'],
     },
+]
+
+export const lookbook_page_data = [
+  {
+    src_thumb: ['/img/lookbook-content-01.jpg', '/img/lookbook-content-02.jpg'],
+    detail_info: [
+      {id:'CA23SSHECP00002002', title: 'MADISON LOGO CAP', price: 68000, src: '/img/lookbook-content-01-01.jpg'},
+      {id:'CA23SSTSSS11222001', title: 'S/S COIN T-SHIRT', price: 83000, src: '/img/lookbook-content-01-02.jpg'},
+      {id:'CA23FWTSLS00266001', title: 'L/S BASE T-SHIRT', price: 48000, src: '/img/lookbook-content-01-03.jpg'},
+      {id:'CA23SSPAJE00759001', title: 'BRANDON PANT SMITH', price: 165000, src: '/img/lookbook-content-01-04.jpg'},
+    ]
+  },
+  {
+    src_thumb: ['/img/lookbook-content-03.jpg', '/img/lookbook-content-04.jpg'],
+    detail_info: [
+      {id:'CA23SSHECP01301001', title: 'MADISON LOGO CAP WALL', price: 68000, src: '/img/lookbook-content-02-01.jpg'},
+      {id:'CA23SSSHSS01358001', title: 'S/S BRAXTON SHIRT WHITE', price: 118000, src: '/img/lookbook-content-02-02.jpg'},
+      {id:'CA23SSSTJE00733001', title: 'LANDON SHORT ROBERTSON BLUE BLEACHED', price: 135000, src: '/img/lookbook-content-02-03.jpg'},
+      {id:'CA23SSHECP00002002', title: 'BAYFIELD TOTE STORM BLUE FADED', price: 108000, src: '/img/lookbook-content-02-04.jpg'},
+    ]
+  },
+  {
+    src_thumb: ['/img/lookbook-content-05.jpg', '/img/lookbook-content-06.jpg'],
+    detail_info: [
+      {id:'CA23SSHEBC03369001', title: 'ELWAY BUCKET HAT DOLLAR GREEN', price: 61000, src: '/img/lookbook-content-03-01.jpg'},
+      {id:'CA23SSSHSS00040001', title: 'W S/S COBA SHIRT WHITE', price: 124000, src: '/img/lookbook-content-03-02.jpg'},
+      {id:'CA23SSBABS00002006', title: 'SYLVAN TRAVEL BAG BLACK', price: 79800, src: '/img/lookbook-content-03-03.jpg'},
+      {id:'CA23SSPACH00692002', title: 'W TRISTIN SHORT BLACK RINSED', price: 82800, src: '/img/lookbook-content-03-04.jpg'},
+    ]
+  },
+
 ]
 
 export const insta_data = [
@@ -1054,15 +1019,15 @@ export const products = [{'eng': 'JET CARGO PANT LANE',
 'number': 89,
 'price': 55000,
 'sales': 84},
-{'eng': 'L/S BASE T-SHIRT',
-'id': 'CA23FWTSLS00266001',
-'image': ['https://media.worksout.co.kr/uploads/live/CA23SSTSLS00266001/CA23SSTSLS00266001-1.jpg',
-          'https://media.worksout.co.kr/uploads/live/CA23SSTSLS00266001/CA23SSTSLS00266001-90.jpg',
-          'https://media.worksout.co.kr/uploads/live/CA23SSTSLS00266001/CA23SSTSLS00266001-91.jpg'],
-'kor': '긴팔 베이스 티셔츠 화이트 블랙',
-'number': 90,
-'price': 55000,
-'sales': 59},
+// {'eng': 'L/S BASE T-SHIRT',
+// 'id': 'CA23FWTSLS00266001',
+// 'image': ['https://media.worksout.co.kr/uploads/live/CA23SSTSLS00266001/CA23SSTSLS00266001-1.jpg',
+//           'https://media.worksout.co.kr/uploads/live/CA23SSTSLS00266001/CA23SSTSLS00266001-90.jpg',
+//           'https://media.worksout.co.kr/uploads/live/CA23SSTSLS00266001/CA23SSTSLS00266001-91.jpg'],
+// 'kor': '긴팔 베이스 티셔츠 화이트 블랙',
+// 'number': 90,
+// 'price': 55000,
+// 'sales': 59},
 {'eng': 'L/S WELDON SHIRT',
 'id': 'CA23FWSHLS00760001',
 'image': ['https://media.worksout.co.kr/uploads/live/CA23SSSHLS00760001/CA23SSSHLS00760001-1.jpg',
@@ -1144,15 +1109,15 @@ export const products = [{'eng': 'JET CARGO PANT LANE',
 'number': 99,
 'price': 49800,
 'sales': 43},
-{'eng': 'S/S COIN T-SHIRT',
-'id': 'CA23SSTSSS11222001',
-'image': ['https://media.worksout.co.kr/uploads/live/CA23SSTSSS11222001/CA23SSTSSS11222001-1.jpg',
-          'https://media.worksout.co.kr/uploads/live/CA23SSTSSS11222001/CA23SSTSSS11222001-90.jpg',
-          'https://media.worksout.co.kr/uploads/live/CA23SSTSSS11222001/CA23SSTSSS11222001-91.jpg'],
-'kor': '반팔 코인 티셔츠 아케이드 선라이즈',
-'number': 100,
-'price': 49800,
-'sales': 63},
+// {'eng': 'S/S COIN T-SHIRT',
+// 'id': 'CA23SSTSSS11222001',
+// 'image': ['https://media.worksout.co.kr/uploads/live/CA23SSTSSS11222001/CA23SSTSSS11222001-1.jpg',
+//           'https://media.worksout.co.kr/uploads/live/CA23SSTSSS11222001/CA23SSTSSS11222001-90.jpg',
+//           'https://media.worksout.co.kr/uploads/live/CA23SSTSSS11222001/CA23SSTSSS11222001-91.jpg'],
+// 'kor': '반팔 코인 티셔츠 아케이드 선라이즈',
+// 'number': 100,
+// 'price': 49800,
+// 'sales': 63},
 {'eng': 'L/S TORK RUGBY SHIRT',
 'id': 'CA23SSTSLS11214001',
 'image': ['https://media.worksout.co.kr/uploads/live/CA23SSTSLS11214001/CA23SSTSLS11214001-1.jpg',
@@ -1180,5 +1145,102 @@ export const products = [{'eng': 'JET CARGO PANT LANE',
 'number': 103,
 'price': 58000,
 'sales': 60},
+{'id':'CA23SSHECP00002002', 'eng': 'MADISON LOGO CAP', price: 68000,
+'kor' : '메디슨 로고 캡 블랙',
+'image': ['https://media.worksout.co.kr/uploads/live/CA23SSHECP00002002/CA23SSHECP00002002-1.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSHECP00002002/CA23SSHECP00002002-3.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSHECP00002002/CA23SSHECP00002002-4.jpg'],
+'number' : 104,
+'sales' : 50
+},
+{'id':'CA23SSTSSS11222001', 'eng': 'S/S COIN T-SHIRT ARCADE/SUNRISE', price: 83000,
+'kor' : '반팔 코인 티셔츠 아케이드/선라이즈',
+'image': ['https://media.worksout.co.kr/uploads/live/CA23SSTSSS11222001/CA23SSTSSS11222001-1.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSTSSS11222001/CA23SSTSSS11222001-110.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSTSSS11222001/CA23SSTSSS11222001-92.jpg'],
+'number' : 105,
+'sales' : 50
+},
+// {'id':'CA23SSTSSS11222001', 'eng': 'S/S COIN T-SHIRT ARCADE/SUNRISE', price: 68000,
+// 'kor' : '반팔 코인 티셔츠 아케이드/선라이즈',
+// 'image': ['https://media.worksout.co.kr/uploads/live/CA23SSTSSS11222001/CA23SSTSSS11222001-1.jpg',
+// 'https://media.worksout.co.kr/uploads/live/CA23SSTSSS11222001/CA23SSTSSS11222001-110.jpg',
+// 'https://media.worksout.co.kr/uploads/live/CA23SSTSSS11222001/CA23SSTSSS11222001-90.jpg'],
+// 'number' : 106,
+// 'sales' : 50
+// },
+{'id':'CA23FWTSLS00266001', 'eng': 'L/S BASE T-SHIRT WHITE/BLACK', price: 118000,
+'kor' : '긴팔 베이스 티셔츠 화이트/블랙',
+'image': ['https://media.worksout.co.kr/uploads/live/CA23SSTSLS00266001/CA23SSTSLS00266001-1.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSTSLS00266001/CA23SSTSLS00266001-110.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSTSLS00266001/CA23SSTSLS00266001-90.jpg'],
+'number' : 107,
+'sales' : 50
+},
+// {'id':'CA23SSPAJE00759001', 'eng': 'BRANDON PANT SMITH BLUE STONE BLEACHED', price: 99000,
+// 'kor' : '브랜든 팬츠 스미스 블루 스톤 블리치드',
+// 'image': ['https://media.worksout.co.kr/uploads/live/CA23SSPAJE00759001/CA23SSPAJE00759001-1.jpg',
+// 'https://media.worksout.co.kr/uploads/live/CA23SSPAJE00759001/CA23SSPAJE00759001-110.jpg',
+// 'https://media.worksout.co.kr/uploads/live/CA23SSPAJE00759001/CA23SSPAJE00759001-90.jpg'],
+// 'number' : 108,
+// 'sales' : 50
+// },
+{'id':'CA23SSHECP01301001', 'eng': 'MADISON LOGO CAP WALL', price: 40800,
+'kor' : '메디슨 로고 캡 월',
+'image': ['https://media.worksout.co.kr/uploads/live/CA23SSHECP01301001/CA23SSHECP01301001-1.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSHECP01301001/CA23SSHECP01301001-3.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSHECP01301001/CA23SSHECP01301001-4.JPG'],
+'number' : 109,
+'sales' : 50
+},
+{'id':'CA23SSSHSS01358001', 'eng': 'S/S BRAXTON SHIRT WHITE', price: 70800,
+'kor' : '반팔 브랙스턴 셔츠 화이트/화이트',
+'image': ['https://media.worksout.co.kr/uploads/live/CA23SSSHSS01358001/CA23SSSHSS01358001-1.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSSHSS01358001/CA23SSSHSS01358001-110.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSSHSS01358001/CA23SSSHSS01358001-90.jpg'],
+'number' : 110,
+'sales' : 50
+},
+{'id':'CA23SSSTJE00733001', 'eng': 'LANDON SHORT ROBERTSON BLUE BLEACHED', price: 81000,
+'kor' : '랜든 쇼츠 로버트슨 블루 블리치드',
+'image': ['https://media.worksout.co.kr/uploads/live/CA23SSSTJE00733001/CA23SSSTJE00733001-1.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSSTJE00733001/CA23SSSTJE00733001-110.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSSTJE00733001/CA23SSSTJE00733001-90.jpg'],
+'number' : 111,
+'sales' : 50
+},
+{'id':'CA23SSHEBC03369001', 'eng': 'ELWAY BUCKET HAT DOLLAR GREEN', price: 61000,
+'kor' : '엘웨이 버킷 햇 달러 그린',
+'image': ['https://media.worksout.co.kr/uploads/live/CA23SSHEBC03369001/CA23SSHEBC03369001-1.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSHEBC03369001/CA23SSHEBC03369001-3.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSHEBC03369001/CA23SSHEBC03369001-4.jpg'],
+'number' : 112,
+'sales' : 50
+},
+{'id':'CA23SSSHSS00040001', 'eng': 'W S/S COBA SHIRT WHITE', price: 124000,
+'kor' : '여성 반팔 코바 셔츠 화이트',
+'image': ['https://media.worksout.co.kr/uploads/live/CA23SSSHSS00040001/CA23SSSHSS00040001-1.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSSHSS00040001/CA23SSSHSS00040001-110.JPG',
+'https://media.worksout.co.kr/uploads/live/CA23SSSHSS00040001/CA23SSSHSS00040001-90.JPG'],
+'number' : 113,
+'sales' : 50
+},
+{'id':'CA23SSBABS00002006', 'eng': 'SYLVAN TRAVEL BAG BLACK', price: 79800,
+'kor' : '실번 트레블 백 블랙',
+'image': ['https://media.worksout.co.kr/uploads/live/CA23SSBABS00002006/CA23SSBABS00002006-90.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSBABS00002006/CA23SSBABS00002006-91.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSBABS00002006/CA23SSBABS00002006-1.jpg'],
+'number' : 114,
+'sales' : 50
+},
+{'id':'CA23SSPACH00692002', 'eng': 'W TRISTIN SHORT BLACK RINSED', price: 82800,
+'kor' : '트리스틴 바지 블랙 린스드',
+'image': ['https://media.worksout.co.kr/uploads/live/CA23SSPACH00692002/CA23SSPACH00692002-1.jpg',
+'https://media.worksout.co.kr/uploads/live/CA23SSPACH00692002/CA23SSPACH00692002-110.JPG',
+'https://media.worksout.co.kr/uploads/live/CA23SSPACH00692002/CA23SSPACH00692002-90.JPG'
+],
+'number' : 115,
+'sales' : 50
+},
 
 ]

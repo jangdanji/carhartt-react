@@ -109,16 +109,35 @@ export default function Home() {
         <section className='lookbook'>
             <h2>Lookbook</h2>
             <div className='lookbook-wrap'>
-                <div className='accordion a1'>
-                    {console.log(process.env.PUBLIC_URL + lookbook_data[0].src)}
-
-                    <img src={process.env.PUBLIC_URL + lookbook_data[0].src} alt='lookbook-1'></img>
+                <div className='accordion a1' onClick={() => navigate('/lookbook')}>
+                    <img src={process.env.PUBLIC_URL + lookbook_data[0].src[0]} alt='lookbook-1'></img>
+                    <div className='hover-content'>
+                        <img src={process.env.PUBLIC_URL + lookbook_data[0].src[1]} alt='lookbook-3'></img>
+                        <div className='hover-text'>
+                            <p>CARHARTT WIP SS23 STYLE GUIDE</p>
+                            <span>자세히 보기</span>
+                        </div>
+                    </div>               
                 </div>
-                <div className='accordion a2'>
-                    <img src={process.env.PUBLIC_URL + lookbook_data[1].src} alt='lookbook-2'></img>
+                <div className='accordion a2' onClick={() => navigate('/lookbook')}>
+                    <img src={process.env.PUBLIC_URL + lookbook_data[1].src[0]} alt='lookbook-2'></img>
+                    <div className='hover-content'>
+                        <img src={process.env.PUBLIC_URL + lookbook_data[1].src[1]} alt='lookbook-3'></img>
+                        <div className='hover-text'>
+                            <p>CARHARTT WIP SS23 STYLE GUIDE</p>
+                            <span>자세히 보기</span>
+                        </div>
+                    </div>                 
                 </div>
-                <div className='accordion a3'>
-                    <img src={process.env.PUBLIC_URL + lookbook_data[2].src} alt='lookbook-3'></img>
+                <div className='accordion a3' onClick={() => navigate('/lookbook')}>
+                    <img src={process.env.PUBLIC_URL + lookbook_data[2].src[0]} alt='lookbook-3'></img>
+                    <div className='hover-content'>
+                        <img src={process.env.PUBLIC_URL + lookbook_data[2].src[1]} alt='lookbook-3'></img>
+                        <div className='hover-text'>
+                            <p>CARHARTT WIP SS23 STYLE GUIDE</p>
+                            <span>자세히 보기</span>
+                        </div>
+                    </div>  
                 </div>
             </div>
         </section>

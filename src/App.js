@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import ProductImport from './pages/ProductImport';
 import Cart from './pages/Cart'
 import Detail from './pages/Detail';
+import Lookbook from './pages/Lookbook';
 
 function App() {
 
@@ -31,6 +32,9 @@ function App() {
                       <li onClick={ ()=> {
                           navigate('/products/acc')
                           } }>ACC</li>
+                      <li onClick={ ()=> {
+                          navigate('/lookbook')
+                          } }>LOOKBOOK</li>
                   </ul>
               </div>
               <div className='user-menu'>
@@ -55,6 +59,7 @@ function App() {
           </Route>
           <Route path='/detail/:id' element={<Detail></Detail>}></Route>
           <Route path='/cart' element={<Cart/>} />
+          <Route path='/lookbook' element={<Lookbook/>} />
       </Routes>
 
       <footer className="footer">

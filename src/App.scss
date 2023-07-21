@@ -21,10 +21,11 @@ $color1: #FFBF00;
         }
         .category{
             ul{
+                margin-left: 15px;
                 li{
                     display: inline-block;
                     margin: 0 10px; padding: 0 5px;
-                    font-size: 24px; font-weight: bold;
+                    font-size: 22px; font-weight: bold;
                     cursor: pointer;
                     &:hover{color: $color1;}
                 }
@@ -109,10 +110,11 @@ $color1: #FFBF00;
             width: 100%;
 
             .swiper-slide{
-                position: relative; border: 1px solid #ddd; box-sizing: border-box;
+                position: relative; 
 
                 .slide-wrap{
-                    
+                    margin-bottom: 40px;
+                    // border: 1px solid #ddd; box-sizing: border-box;
                 }
 
                 img{
@@ -120,21 +122,28 @@ $color1: #FFBF00;
                     cursor: pointer;
                 }
                 img.hover-img{
-                    width: 100%; height: 100%; object-fit: cover;
+                    width: 100%; height: calc(100% - 40px); object-fit: cover;
                     position: absolute; top: 0; left: 0; opacity: 0; z-index: 1;
                     transition: 0.1s;
                     &:hover{opacity: 1;}
                 }
                 p.name{
                     position: absolute; z-index: 2;
-                    bottom: 0; background-color: rgba($color: black, $alpha: 0.3);
+                    bottom: 40px; background-color: rgba($color: black, $alpha: 0.3);
                     width: 100%; margin: auto 0; height: 70px; padding: 10px; box-sizing: border-box;
                     // text-align: center;
                     color: white;
                 }
             }
 
-            .swiper-button-prev, .swiper-button-next{color: $color1;}
+            .swiper-button-prev, .swiper-button-next{
+                position: absolute; top: 0; padding: 0 15px;
+                color: $color1; height: calc(100% - 40px);
+                margin-top: 0;
+                &:hover{background-color: rgba($color: #000000, $alpha: 0.1);}
+            }
+            .swiper-button-prev{left: 0;}
+            .swiper-button-next{right: 0;}
             .swiper-pagination-bullet-active{background-color: $color1;}
         }
     }
@@ -151,28 +160,40 @@ $color1: #FFBF00;
             width: 100%;
 
             .swiper-slide{
-                position: relative; border: 1px solid #ddd; box-sizing: border-box;
+                position: relative; 
+
+                .slide-wrap{
+                    margin-bottom: 40px;
+                    // border: 1px solid #ddd; box-sizing: border-box;
+                }
 
                 img{
-                    width: 100%; height: 90%;
+                    width: 100%;
                     cursor: pointer;
                 }
                 img.hover-img{
-                    width: 100%; height: 90%; object-fit: cover;
+                    width: 100%; height: calc(100% - 40px); object-fit: cover;
                     position: absolute; top: 0; left: 0; opacity: 0; z-index: 1;
                     transition: 0.1s;
                     &:hover{opacity: 1;}
                 }
                 p.name{
                     position: absolute; z-index: 2;
-                    bottom: 0; background-color: rgba($color: black, $alpha: 0.3);
+                    bottom: 40px; background-color: rgba($color: black, $alpha: 0.3);
                     width: 100%; margin: auto 0; height: 70px; padding: 10px; box-sizing: border-box;
                     // text-align: center;
                     color: white;
                 }
             }
 
-            .swiper-button-prev, .swiper-button-next{color: $color1;}
+            .swiper-button-prev, .swiper-button-next{
+                position: absolute; top: 0; padding: 0 15px;
+                color: $color1; height: calc(100% - 40px);
+                margin-top: 0;
+                &:hover{background-color: rgba($color: #000000, $alpha: 0.1);}
+            }
+            .swiper-button-prev{left: 0;}
+            .swiper-button-next{right: 0;}
             .swiper-pagination-bullet-active{background-color: $color1;}
         }
     }
@@ -188,52 +209,33 @@ $color1: #FFBF00;
         transition: width 0.5s;
 
         .accordion{
+            width: 405px;
             height: 700px;
             margin-right: 15px; &:last-child{margin-right: 0;}
             overflow: hidden;
-            transition: flex 0.2s;
-
-            .hover-btn {
-                border: none;
-                color: #000;
-              }
-              .hover-btn:after {
-                position: absolute;
-                content: "";
-                width: 0;
-                height: 100%;
-                top: 0;
-                left: 0;
-                direction: rtl;
-                z-index: -1;
-                box-shadow:
-                 -7px -7px 20px 0px #fff9,
-                 -4px -4px 5px 0px #fff9,
-                 7px 7px 20px 0px #0002,
-                 4px 4px 5px 0px #0001;
-                transition: all 0.3s ease;
-              }
-              .hover-btn:hover {
-                color: #000;
-              }
-              .hover-btn:hover:after {
-                left: auto;
-                right: 0;
-                width: 100%;
-              }
-              .hover-btn:active {
-                top: 2px;
-              }
-        }
-
-        // .a1:hover{flex: 0 0 825px;}
-        // .a2:hover{flex: 0 0 825px;}
-        // .a3:hover{flex: 0 0 825px;}
+            position: relative;
+            cursor: pointer;
         
 
             img{
+                width: 100%; object-fit: cover;
                 height: 100%;
             }
+
+            .hover-content{
+                position: absolute; z-index: 1; top: 0; left: 0; opacity: 0;
+                transition: 0.1s;
+                &:hover{opacity: 1;}
+                .hover-text{
+                    width: 100%;
+                    position: absolute; bottom: 0;
+                    padding: 30px; color: white;
+                    background-color: rgba($color: black, $alpha: 0.5);
+                    p{margin: 0; line-height: 30px;}
+                    span{color: $color1;}
+                }
+            }
+        }
         
     }
 }
@@ -389,15 +391,39 @@ $color1: #FFBF00;
 
 section.products{
 
-    .pruducts-wrap{
+    .products-wrap{
         margin: 0 auto; width: 1245px;
         display: flex; flex-wrap: wrap;
 
+        .sub-banner{
+            width: 100%; height: 300px; overflow: hidden;
+            position: relative; color: white;
+            img{width: 100%; filter: brightness(50%);}
+            h1{
+                position: absolute; top: 0; left: 0; display: block; padding: 0 30px;
+                font-size: 36px;
+            }
+        }
+
+        .filter{
+            width: 100%; margin-top: 15px;
+            display: flex; justify-content: space-between;
+            align-items: center;
+
+            .stat{
+
+            }
+
+            select{
+                width: 150px; padding: 10px;
+            }
+        }
+
         .product-box{
-            width: 300px; margin: 20px 15px 0 0;
+            width: 300px; margin: 20px 15px 50px 0;
             position: relative;
             
-            &:nth-child(4n) {
+            &:nth-child(4n + 2) { /* sub banner, filter때문에.. */
                 margin-right: 0;
             }
 
@@ -425,7 +451,9 @@ section.products{
                 p, b{padding: 0 10px;}
 
                 button.add-to-cart{
-                    display: block; width: 100px; float: right; margin-right: 10px;}
+                    display: block; width: 100px; float: right; margin-right: 10px;
+                    background-color: $color1;
+                }
             }
 
 
@@ -515,5 +543,75 @@ section.detail-view{
         }
 
         h2.cart-result{text-align: center;}
+    }
+}
+
+.lookbook-page{
+
+    .lookbook-page-wrap{
+        margin: 0 auto; width: 1245px;
+
+        .lookbook-title{
+
+            position: relative; height: 300px;
+            background-color: rgba($color: #000000, $alpha: 0.4);
+            overflow: hidden; color: white;
+            
+            h1{font-size: 36px; margin: 0;}
+            h1, p{padding: 30px;}
+            
+            
+            video{
+                width: 100%; object-fit: cover; z-index: -1;
+                position: absolute; top: 0;
+            }
+        }
+
+        .contents{
+
+            h2.title{text-align: center; margin: 30px 0;}
+
+            .content{
+
+                overflow: hidden;
+                width: 100%;
+                display: flex; flex-wrap: wrap;
+                justify-content: center;
+
+                > img{
+                    width: 90%;
+                    margin: 15px 0;
+                }
+
+                .wearing{
+                    width: 100%; margin: 60px 0;
+                    display: flex; justify-content: center;
+                    flex-wrap: wrap;
+                    position: relative;
+
+                    > div {cursor: pointer;}
+
+                    h2{width: 100%; text-align: center; margin: 30px 0;}
+                    img{
+                        width: 195px;
+                        border: 1px solid #eee;
+                        &:last-child{margin-right: 0;}
+                    }
+
+                    .wearing-product{
+                        position: relative; margin-right: 15px;
+                        .hover-content{
+                            position: absolute; width: 100%; height: 100%; opacity: 0;
+                            z-index: 1; background-color: rgba($color: #000000, $alpha: 0.5);
+                            color: white; transition: 0.1s;
+                            &:hover{opacity: 1;}
+                            display: flex; align-items: center;
+                            p{text-align: center; width: 100%;}
+                        }
+                    }
+
+                }
+            }
+        }
     }
 }
