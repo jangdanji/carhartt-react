@@ -47,6 +47,14 @@ $color1: #FFBF00;
                         border-radius: 5px;
                     }
                 }
+                li.cart{
+                    position: relative;
+                    .cart-state{
+                        position: absolute; top: -15px; right: -10px; background-color: $color1;
+                        color: black; width: 20px; height: 20px; line-height: 20px; border-radius: 5px;
+                        text-align: center;
+                    }
+                }
             }
         }
     }
@@ -262,7 +270,12 @@ $color1: #FFBF00;
                 // position: absolute; left: 100%;
                 flex: 0 0 330px; margin: auto 0;
                 p{text-align: center;}
-                button{margin: 0 auto; display: block; padding: 5px 10px; background-color: $color1; cursor: pointer;}
+                button{
+                    margin: 0 auto; display: block; padding: 5px 10px;
+                    background-color: $color1; cursor: pointer; border: 1px solid black;
+                    transition: 0.1s;
+                    &:hover{background-color: #fff;}
+                }
             }
         }
 
@@ -445,14 +458,19 @@ section.products{
             .detail{
 
                 // padding: 0 10px;
+                position: relative;
 
                 h3.name-kor{height: 50px; background-color: #eee; padding: 10px;}
 
-                p, b{padding: 0 10px;}
+                p{padding: 0 10px;}
+                b{padding: 10px; display: block;}
 
                 button.add-to-cart{
+                    position: absolute; bottom: 5px; right: 0;
                     display: block; width: 100px; float: right; margin-right: 10px;
-                    background-color: $color1;
+                    background-color: $color1; cursor: pointer;
+                    transition: 0.1s; border: 1px solid black; padding: 5px 0;
+                    &:hover{background-color: white;}
                 }
             }
 
@@ -476,6 +494,15 @@ section.detail-view{
                 .swiper-slide{
                     img{width: 100%; height: 100%; object-fit: cover;}
                 }
+                .swiper-button-prev, .swiper-button-next{
+                    position: absolute; top: 0; padding: 0 15px;
+                    color: $color1; height: calc(100% - 40px);
+                    margin-top: 0;
+                    &:hover{background-color: rgba($color: #000000, $alpha: 0.1);}
+                }
+                .swiper-button-prev{left: 0;}
+                .swiper-button-next{right: 0;}
+                .swiper-pagination-bullet-active{background-color: $color1;}
             }
         }
         .detail-info{
@@ -489,11 +516,25 @@ section.detail-view{
                 margin-bottom: 30px;
             }
             .user-btn{
-                display: flex; margin-bottom: 30px;
+                display: flex; justify-content: space-between;
+                margin-bottom: 30px;
+
+                .amount-btn{
+                    display: flex;
+                    > div{
+                        width: 40px; height: 40px; line-height: 40px; text-align: center;
+                    }
+                    .prompt{font-size: 20px; width: 60px;}
+                    .plus, .minus{
+                        background-color: $color1; border-radius: 5px; cursor: pointer;
+                        transition: 0.2s;
+                        &:hover{background-color: black; color: $color1;}
+                    }
+                }
                 button{
                     &:first-child{margin-right: 15px;}
                     width: calc(50% - 15px);
-                    padding: 10px;
+                    padding: 10px; border: 1px solid black;
                     background-color: $color1;
                     transition: 0.1s; cursor: pointer;
                     &:hover{background-color: #fff;}
@@ -534,8 +575,12 @@ section.detail-view{
                 .count{text-align: center; width: 10%;}
                 .cart-btn{
                     width: 15%;
+                    display: flex; justify-content: space-evenly;
                     button{
-                        padding: 0 10px; line-height: 20px; margin: 0 10px;
+                        width: 30px; height: 30px; display: block;
+                        background-color: $color1;
+                        border-radius: 5px; border: none; cursor: pointer;
+                        &:last-child{background-color: red; color: white;}
                     }
                 }
                 

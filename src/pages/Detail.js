@@ -4,6 +4,13 @@ import { products } from './data'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 
+
+import { useDispatch, useSelector } from 'react-redux';
+import { addItem } from './store';
+
+import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const swiperProps = {
   modules: [Navigation, Pagination], slidesPerView: 1,
   navigation: true, loop: true,
@@ -14,6 +21,10 @@ const swiperProps = {
 export default function Detail() {
 
     const {id} = useParams()
+    const dispatch = useDispatch()
+
+    const [amount, setAmount] = useState(1)
+    console.log(amount)
 
   return(
     <section className="detail-view">
@@ -29,7 +40,7 @@ export default function Detail() {
                         data.image.map((image, i) => {
                         return (
                             <SwiperSlide key={i}>
-                              <img src={image} alt={'swiper-img-' + i}></img>
+                              <img src={process.env.PUBLIC_URL + image} alt={'swiper-img-' + i}></img>
                             </SwiperSlide>
                         )
                         })
@@ -41,11 +52,18 @@ export default function Detail() {
                       <p className='title-id'><b>{data.id}</b></p>
                       <p className='title-kor'>{data.kor}</p>
                       <p className='title-eng'>{data.eng}</p>
-                      <p className='price'>₩ {data.price}</p>
+                      <p className='price'>₩ {data.price.toLocaleString()}</p>
                     </div>
                     <div className='user-btn'>
-                      <button className='cart'>장바구니 담기</button>
-                      <button className='buy'>구매하기</button>
+                      <div className='amount-btn'>
+                        <div className='minus' onClick={() => amount == 1 ? setAmount(1) : setAmount(amount - 1)}><FontAwesomeIcon icon={faMinus} /></div>
+                        <div className='prompt'>{amount}</div>
+                        <div className='plus' onClick={() => setAmount(amount + 1)}><FontAwesomeIcon icon={faPlus} /></div>
+                      </div>
+                      <button className='cart' onClick={() => {
+                        dispatch(addItem({img: data.image, id: data.id, title: data.kor, count:amount, price:data.price}))
+                        alert('장바구니에 등록되었습니다.')
+                      }}>장바구니 담기</button>
                     </div>
                     <div className='notice'>
                       <p className='notice-title'>배송 안내</p>

@@ -70,8 +70,8 @@ export default function Home() {
                         <SwiperSlide>
                             <Link to={`/detail/${data.id}`}>
                                 <div className='slide-wrap'>
-                                    <img src={data.image[0]}></img>
-                                    <img src={data.image[2]} className='hover-img'></img>
+                                    <img src={process.env.PUBLIC_URL + data.image[0]}></img>
+                                    <img src={process.env.PUBLIC_URL + data.image[2]} className='hover-img'></img>
                                     <p className='name'>{data.kor}</p>
                                 </div>
                             </Link>
@@ -93,8 +93,8 @@ export default function Home() {
                         <SwiperSlide>
                             <Link to={`/detail/${data.id}`}>
                                 <div className='slide-wrap'>
-                                    <img src={data.image[0]}></img>
-                                    <img src={data.image[1]} className='hover-img'></img>
+                                    <img src={process.env.PUBLIC_URL + data.image[0]}></img>
+                                    <img src={process.env.PUBLIC_URL + data.image[1]} className='hover-img'></img>
                                     <p className='name'>{data.kor}</p>
                                 </div>
                             </Link>
@@ -155,7 +155,7 @@ export default function Home() {
                                         <div className='hover-content'>
                                             <p className='title-eng'>{data.eng}</p>
                                             <p className='title-kor'>{data.kor}</p>
-                                            <p className='price'>{data.price}</p>
+                                            <p className='price'>{data.price.toLocaleString()}</p>
                                             <button className='view-more' onClick={ () => navigate(`detail/${data.id}`)}>자세히 보기</button>
                                         </div>
                                 </div>

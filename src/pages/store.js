@@ -1,13 +1,55 @@
 /* eslint-disable */ 
 
 import { configureStore, createSlice } from '@reduxjs/toolkit'
+
 import { products } from './data'
 
-const category = createSlice({
-    name: 'category',
-    initialState:'',
+const sort = createSlice({
+    name: 'sort',
+    initialState:{
+        database: products
+    },
     reducers:{
+        setData(state, action) {
 
+            const data = action.payload[0]
+            let category = action.payload[1]
+
+            let resultData
+            
+            /* 카테고리 분류 */
+            switch (category) {
+                case 'bottom': category = 'PA'; break;
+                case 'acc': category = 'AC'; break;
+                case 'top': category = 'TS JA KN SH'; break;
+            }
+            resultData = data.filter((pd) => {
+                return category.includes(pd.id.slice(6,8))
+            })
+
+            /* 필터 분류 */
+
+            const filter = action.payload[2]
+
+            switch (filter) {
+
+                case 'newest': 
+                    resultData = resultData.slice().sort((a, b) => b.number - a.number)
+                    state.database = resultData; break;
+                case 'hot':
+                    resultData = resultData.slice().sort((a, b) => b.sales - a.sales)
+                    state.database = resultData; break;
+                case 'high-price':
+                    resultData = resultData.slice().sort((a, b) => b.price - a.price)
+                    state.database = resultData; break;
+                case 'low-price':
+                    resultData = resultData.slice().sort((a, b) => a.price - b.price)
+                    state.database = resultData; break;
+            }
+            
+
+            
+        }
     }
 })
 
@@ -26,12 +68,12 @@ const cart = createSlice({
             })
 
             if (index !== -1) {
-                state.list[index].count++
-                state.totalPrice += state.list[index].price
+                state.list[index].count += action.payload.count
+                state.totalPrice += action.payload.price * action.payload.count
             }
             else {
                 state.list.push(action.payload)
-                state.totalPrice += action.payload.price
+                state.totalPrice += action.payload.price * action.payload.count
             }
         },
         cartBtn(state, action) {
@@ -76,11 +118,12 @@ const cart = createSlice({
     }
 })
 
-
 export const { addItem, cartBtn } = cart.actions
+export const { setData } = sort.actions
 
 export default configureStore({
     reducer:{
         cart:cart.reducer,
+        sort:sort.reducer
     }
 })

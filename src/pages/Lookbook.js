@@ -37,7 +37,7 @@ export default function Lookbook() {
                                                 <img src={process.env.PUBLIC_URL + detail.src} alt='lookbook-image'></img>
                                                 <Link to={`/detail/${detail.id}`}>
                                                     <div className='hover-content'>
-                                                        <p>{detail.title}<br /> <b>￦ {detail.price}</b></p>
+                                                        <p>{detail.title}<br /> <b>￦ {detail.price.toLocaleString()}</b></p>
                                                     </div>
                                                 </Link>
                                             </div>

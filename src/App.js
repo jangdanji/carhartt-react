@@ -10,9 +10,12 @@ import Cart from './pages/Cart'
 import Detail from './pages/Detail';
 import Lookbook from './pages/Lookbook';
 
+import { useSelector } from 'react-redux';
+
 function App() {
 
   const navigate = useNavigate()
+  const cartState = useSelector(state => state.cart.list.length)
 
   return (
     <div className="App">
@@ -41,7 +44,7 @@ function App() {
                   <ul>
                       <li>로그인</li>
                       <li>회원가입</li>
-                      <li onClick={ ()=> { navigate('/cart') } }>장바구니</li>
+                      <li className='cart' onClick={ ()=> { navigate('/cart') } }>장바구니 {cartState == 0 ? '' : <div className='cart-state'>{cartState}</div>}</li>
                       <li className='search'>
                           <input type='text'></input>
                       </li>

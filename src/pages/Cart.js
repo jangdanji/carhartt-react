@@ -5,10 +5,15 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { cartBtn } from './store'
 
+import { faTrashAlt, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export default function Cart() {
 
     const state = useSelector((state) => state);
     const dispatch = useDispatch();
+
+    console.log(state.cart.list)
 
     if (state.cart.list.length !== 0) {
         return (
@@ -21,27 +26,28 @@ export default function Cart() {
                                 <div className='price'>가격</div>
                                 <div className='count'>갯수</div>
                                 <div className='cart-btn'></div>
+                                
                             </li>
 
                             {state.cart.list.map((item, i) => {
                                 return(
                                     <li key={i}>
                                         <div className='image'>
-                                            <img src={item.img} alt='cart-img'/>
+                                            <img src={process.env.PUBLIC_URL + item.img[0]} alt='cart-img'/>
                                         </div>
                                         <div className='name'>{item.title}</div>
-                                        <div className='price'>{item.price}</div>
+                                        <div className='price'>{item.price.toLocaleString()}</div>
                                         <div className='count'>{item.count}</div>
                                         <div className='cart-btn'>
                                             <button className='plus' onClick={ () => {
                                                 dispatch(cartBtn([item, 'plus']))
-                                            }}>+</button>
+                                            }}><FontAwesomeIcon icon={faPlus} /></button>
                                             <button className='minus' onClick={ () => {
                                                 dispatch(cartBtn([item, 'minus']))
-                                            }}>-</button>
+                                            }}><FontAwesomeIcon icon={faMinus} /></button>
                                             <button className='delete' onClick={ () => {
                                                 dispatch(cartBtn([item, 'delete']))
-                                            }}>삭제</button>
+                                            }}><FontAwesomeIcon icon={faTrashAlt} /></button>
                                         </div>
                                     </li>
                                 )
@@ -51,7 +57,7 @@ export default function Cart() {
                             
                         </ul>
                         <h2 className='cart-result'>
-                            {'총 가격 : ' + state.cart.totalPrice}
+                            {'총 가격 : ' + state.cart.totalPrice.toLocaleString()}
                         </h2>
                     </div>
                 </div>
